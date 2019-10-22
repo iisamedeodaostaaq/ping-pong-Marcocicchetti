@@ -1,4 +1,4 @@
-width=500
+width=500  #larghezza campo
 height=440
 xpalla=100
 ypalla=120
