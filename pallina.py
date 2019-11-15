@@ -1,3 +1,4 @@
+## Prof: Mancano i commenti: codice non manutenibile
 width=500  #larghezza campo
 height=440
 xpalla=100
@@ -17,6 +18,7 @@ yrettangolo2=0
 
 def setup():
     size(500,440)
+# Prof.: il backgroud fissato in setup viene immediatamente sovrascritto in draw
     background(0,0,255)
     stroke(0,255,0)
 def draw():
@@ -34,8 +36,10 @@ def draw():
        y2*= -1
        fill(random(255),random(255),random(255))
     if lrettangolo>=width and xrettangolo>=height :
+## Prof.: Cosa intendevi fare?
         xrettangolo+=0
         yrettangolo+=0
+## Prof.: viene gestito solo il rimbalzo in basse
     if ypalla+25>height-25 and xpalla>=xrettangolo and xpalla<=yrettangolo :
         y2*= -1
    
@@ -48,9 +52,11 @@ def keyPressed():
         xrettangolo+=15
     if keyCode == LEFT and xrettangolo>0:
         xrettangolo-=15
+## Prof.: a lavora verso sinistra e d verso destra
     if key == "a" and xrettangolo2>0:
         xrettangolo2-=15
     if key == "d" and xrettangolo2>0:
+## Prof.: errore nella condizione dell'if
         xrettangolo2+=15
     if ypalla+25>=yrettangolo2+25 and xpalla>=xrettangolo2 and xpalla<=yrettangolo2+25 :
         y2*= -1
